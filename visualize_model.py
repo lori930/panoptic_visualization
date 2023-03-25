@@ -15,9 +15,9 @@ model.load_state_dict(checkpoint['state_dict'])
 model.eval()
 model.cpu()
 
-img = np.array(Image.open("inference/images/0ace96c3-48481887.jpg"))
-# image_url = "https://upload.wikimedia.org/wikipedia/commons/f/f1/Puppies_%284984818141%29.jpg"
-# img = np.array(Image.open(requests.get(image_url, stream=True).raw))
+
+image_url = "https://upload.wikimedia.org/wikipedia/commons/f/f1/Puppies_%284984818141%29.jpg"
+img = np.array(Image.open(requests.get(image_url, stream=True).raw))
 img = cv2.resize(img, (640, 640))
 # print(img.shape)
 rgb_img = img.copy()
