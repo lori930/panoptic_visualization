@@ -6,7 +6,7 @@ A toolbox to help you explain panoptic perception models.
 git clone git@github.com:hustvl/YOLOP.git
 pip install torchviz
 ```
-
+Put the files under `YOLOP/` folder.
 
 ### Visualize your model
 ```
