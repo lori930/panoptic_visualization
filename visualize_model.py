@@ -27,4 +27,5 @@ transform = transforms.ToTensor()
 tensor = transform(img).unsqueeze(0)
 output = model(tensor)
 
+# output[0][0]: object detection; output[1]: da_seg; output[2]: ll_seg
 make_dot(output[0][0], params=dict(model.named_parameters())).render("yolop_torchviz-simplified-det.pdf")
